@@ -241,7 +241,7 @@ function moveToLeft(){
 						arr[i][k]=arr[i][j]*2;
 						arr[i][j]=0;
 						chage[i][k]=1;
-						score+=arr[i][k];
+						score = 2 * arr[i][k];
 						$(".score").html(score)
 						break;
 					}
@@ -277,7 +277,8 @@ function moveToUp(){
 						arr[k][j]=arr[i][j]*2;
 						arr[i][j]=0;
 						chage[k][j]=0;
-						score+=arr[k][j];
+						// score+=arr[k][j];
+						score = 2 * arr[i][k]
 						$(".score").html(score);
 						canmove=true;			
 						break;
@@ -314,7 +315,8 @@ function moveToRight(){
 						arr[i][k]=arr[i][j]*2;
 						arr[i][j]=0;
 						chage[i][k]=1;
-						score+=arr[i][k];
+						// score+=arr[i][k];
+						score = 2 * arr[i][k]
 						$(".score").html(score);
 						break;
 					}
@@ -325,6 +327,7 @@ function moveToRight(){
 	if (canmove){
 		getRandSeq();
 	}
+	console.log('has been jishi')
 	setTimeout(update,200);
 	return canmove;
 }
@@ -349,7 +352,8 @@ function moveToDown(){
 						arr[i][j]=0;
 						chage[k][j]=1;
 						canmove=true;
-						score+=arr[k][j];
+						// score+=arr[k][j];
+						score = 2 * arr[i][k]
 						$(".score").html(score);
 						break;
 					}
